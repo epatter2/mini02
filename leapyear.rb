@@ -1,7 +1,7 @@
 class LeapYear
 
   def is_leap_year?(yearVar)
-   if (yearVar % 4 == 0)
+   if (yearVar >= 1752 && yearVar % 4 == 0)
       if (yearVar % 100 == 0)
          if(yearVar % 400 == 0)
             return true
@@ -11,8 +11,10 @@ class LeapYear
          return true
       end
       return true
-   end
+   elsif (yearVar > 0 && yearVar % 4 == 0)
+   return true
+   else 
    return false
+   end
   end
-
 end
